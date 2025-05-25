@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UsbKillerForum Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UsbKillerForum
+  m_TableCollectionNameGuidString: 680b77a512060f64e915b8a52cb4c5b6
+  m_Entries:
+  - m_Id: 43745927168
+    m_Key: Keyword_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45931159552
+    m_Key: Keyword_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90717937664
+    m_Key: 'Forum_Title
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139631910912
+    m_Key: Forum_Link
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336063750144
+    m_Key: Forum_Source
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351972745216
+    m_Key: Forum_Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369337163776
+    m_Key: Section_Title_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 407534690304
+    m_Key: Section_Info_1
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 9145118144933134421
+  references:
+    version: 2
+    RefIds:
+    - rid: 9145118144933134421
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1748090648657

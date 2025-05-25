@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: b04a5923423f1c2429130d04014a84c5
+  m_SerializeEntries:
+  - m_GUID: 192079658415344479b208b21ad367ec
+    m_Address: Assets/Localization/Search/SearchMenuLocalization Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 680b77a512060f64e915b8a52cb4c5b6
+    m_Address: Assets/Localization/SearchSites/UsbKillerForum/UsbKillerForum Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 684c8e53f0c0a95488333d80d73b5c14
+    m_Address: Assets/Localization/DesktopButtons/DesktopButtons Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 1e9b71d689cd9eb4388dc247abfb028d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bb9bc2c22b0d5d54a860b9ce4e321a8e, type: 2}
+    - {fileID: 11400000, guid: 8dd7fc6f1d1dbc049a64d667afe2b363, type: 2}
