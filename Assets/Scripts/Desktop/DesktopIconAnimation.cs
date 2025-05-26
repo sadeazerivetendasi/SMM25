@@ -74,6 +74,6 @@ public class DesktopappBarAnimation : MonoBehaviour, IPointerEnterHandler, IPoin
     }
     void AnimateIcon(Color color,float time)
     {
-        appIcon.GetComponent<Image>().DOColor(color,time);
+        appIcon.DOColor(color,time);
     }
 }

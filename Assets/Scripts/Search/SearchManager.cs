@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -74,7 +75,7 @@ public class SearchManager : MonoBehaviour
                 }
                 keywords.StringChanged += (localizedText) =>
                 {
-                    if (localizedText.ToLower() == searchText.ToLower())
+                    if (string.Equals(localizedText, searchText, StringComparison.OrdinalIgnoreCase))
                     {
                         founds.Add(item);
                         foundCount += 1;
