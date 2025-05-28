@@ -41,14 +41,6 @@ MonoBehaviour:
     m_Key: Forum_Info
     m_Metadata:
       m_Items: []
-  - m_Id: 369337163776
-    m_Key: Section_Title_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 407534690304
-    m_Key: Section_Info_1
-    m_Metadata:
-      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -42,14 +42,6 @@ MonoBehaviour:
     m_Localized: null
     m_Metadata:
       m_Items: []
-  - m_Id: 369337163776
-    m_Localized: null
-    m_Metadata:
-      m_Items: []
-  - m_Id: 407534690304
-    m_Localized: null
-    m_Metadata:
-      m_Items: []
   references:
     version: 2
     RefIds: []

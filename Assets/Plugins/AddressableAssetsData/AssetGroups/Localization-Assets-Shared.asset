@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c85e2490955aa04780f094c79db055f
+    m_Address: Assets/Localization/Chat/Dialog1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 680b77a512060f64e915b8a52cb4c5b6
     m_Address: Assets/Localization/SearchSites/UsbKillerForum/UsbKillerForum Shared
       Data.asset

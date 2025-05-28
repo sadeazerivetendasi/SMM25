@@ -15,18 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: DesktopButtons
   m_TableCollectionNameGuidString: 684c8e53f0c0a95488333d80d73b5c14
   m_Entries:
-  - m_Id: 8127897600
-    m_Key: Button_GameDeveloptxt
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10208272384
-    m_Key: Button_ReadmeTxt
-    m_Metadata:
-      m_Items: []
-  - m_Id: 12104097792
-    m_Key: Button_DarkWebAccessTxt
-    m_Metadata:
-      m_Items: []
   - m_Id: 14389993472
     m_Key: Button_Music
     m_Metadata:
@@ -43,15 +31,11 @@ MonoBehaviour:
     m_Key: Button_Search
     m_Metadata:
       m_Items: []
-  - m_Id: 283702059008
-    m_Key: Button_Email
-    m_Metadata:
-      m_Items: []
   - m_Id: 319076818944
     m_Key: Button_Notepad
     m_Metadata:
       m_Items: []
-  - m_Id: 320788094976
+  - m_Id: 1168632024784896
     m_Key: Button_Files
     m_Metadata:
       m_Items: []
@@ -61,6 +45,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 379407687680
     m_Key: Button_Evidence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1168935851778048
+    m_Key: Button_ReadmeTxt
     m_Metadata:
       m_Items: []
   m_Metadata:

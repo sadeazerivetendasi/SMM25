@@ -11,12 +11,15 @@ public class SearchManager : MonoBehaviour
     public static SearchManager Instance;
     public GameObject[] Pages;
     public SearchData[] searchDatas;
+
     [Header("History")]
     public Transform historyContainer;
     public GameObject historyPrefab;
     [Header("Bookmarks")]
     public Transform bookmarksContainer;
     public GameObject bookmarksPrefab;
+    [Header("History")]
+    public TMP_InputField searchField;
     [Header("Page")]
     public GameObject pageContainer;
     public GameObject pagePrefab;
@@ -26,6 +29,8 @@ public class SearchManager : MonoBehaviour
     [Header("FoundPage")]
     public TMP_Text foundResultsText;
     public LocalizedString foundResults;
+    List<string> bookmarksList = new List<string>();
+    string oldSearchText;
     bool Opening;
     void Awake()
     {
@@ -56,7 +61,9 @@ public class SearchManager : MonoBehaviour
     }
     public void SearchSystem(string searchText)
     {
-        if (string.IsNullOrWhiteSpace(searchText)) return;
+        if (string.IsNullOrWhiteSpace(searchText) || searchText == oldSearchText) return;
+        oldSearchText = searchText;
+        searchField.text = searchText;
         CreateHistory(searchText);
         OpenTab("SearchPage");
         foreach (Transform child in pageContainer.transform)
@@ -126,8 +133,37 @@ public class SearchManager : MonoBehaviour
     }
     void CreateHistory(string text)
     {
-        GameObject newHistory = Instantiate(historyPrefab, historyContainer);
-        newHistory.transform.GetChild(1).GetComponent<TMP_Text>().text = text;
+        HistoryBookmarksRedirect newHistory = Instantiate(historyPrefab, historyContainer).GetComponent<HistoryBookmarksRedirect>();
+        newHistory.redirectText.text = text;
+    }
+    void CreateBookmarks(string text)
+    { 
+        HistoryBookmarksRedirect newBookmarks = Instantiate(bookmarksPrefab, bookmarksContainer).GetComponent<HistoryBookmarksRedirect>();
+        newBookmarks.redirectText.text = text;
+        bookmarksList.Add(text);
+    }
+    public void CreateBookmarksFunction(string text)
+    {
+        bool isSame = false;
+        if (bookmarksList.Count != 0)
+        {
+            foreach (var item in bookmarksList)
+            {
+                if (item == text)
+                {
+                    isSame = true;
+                    break;
+                }
+            }
+            if (!isSame)
+            {
+                CreateBookmarks(text);
+            }
+        }
+        else
+        {
+            CreateBookmarks(text);
+        }
     }
     IEnumerator PageOpenerCoroutine(string page,float secondTime)
     {

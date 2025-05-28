@@ -28,6 +28,13 @@ MonoBehaviour:
     - Locale-az-Latn
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 808a599a59b98284795f1d64b52aa37e
+    m_Address: Dialog1_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4f2e7804db052548986ef61b3c9207d
     m_Address: UsbKillerForum_az-Latn
     m_ReadOnly: 1

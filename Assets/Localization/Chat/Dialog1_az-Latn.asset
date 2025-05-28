@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dialog1_az-Latn
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: az-Latn
+  m_SharedData: {fileID: 11400000, guid: 1c85e2490955aa04780f094c79db055f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 30754840576
+    m_Localized: "N\u0259hay\u0259t ki onlinesan. \u018Fla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 206324211712
+    m_Localized: "\xC7ox yatmaq onsuz ziyand\u0131, x\xFCsusil\u0259 hans\u0131sa
+      manyak \u015F\u0259h\u0259rin yar\u0131s\u0131n\u0131 q\u0259tl\u0259 yetirdiyi
+      bir vaxtda."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874392047104
+    m_Localized: "\u0130\u015F\u0259 ba\u015Flamazdan \u0259vv\u0259l bu s\u0259n\u0259d\u0259
+      bax."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 639281753088
+    m_Localized: "Dem\u0259li \u0259limizd\u0259ki t\u0259k ipuclar\u0131 usb-l\u0259rdi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 185749302272
+    m_Localized: "Onlara baxm\u0131s\u0131z?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 923847651840
+    m_Localized: "Onlara baxmaq s\u0259nin m\u0259suliyy\u0259tindi."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748293056512
+    m_Localized: "Psixopat\u0131n gerid\u0259 qoydu\u011Fu usb-ni tax\u0131b kart
+      oynad\u0131\u011F\u0131m komputeri risk\u0259 ata bilm\u0259r\u0259m."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 461829374976
+    m_Localized: "Daha bir \u015Fey var."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 592840731648
+    m_Localized: "Bu link\u0259 gir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 318576429120
+    m_Localized: "Link i\u015Fl\u0259mir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754920836352
+    m_Localized: "URL d\xFCzg\xFCn yazd\u0131\u011F\u0131ndan \u0259mins\u0259n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 283947561984
+    m_Localized: "Y\u0259qin s\u0259hv yazm\u0131\u015Fam."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847293051776
+    m_Localized: "Axtar\u0131\u015Fda 'usb killer forum' yaz sad\u0259c\u0259"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 519384762048
+    m_Localized: "Tap\u0131lan usb-l\u0259r ictimaiyy\u0259t\u0259 bildirilm\u0259yib."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174829350912
+    m_Localized: "Bu bloq \u0259sl qatilin ola bil\u0259r!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 693847521536
+    m_Localized: "\u0130nsanlar\u0131n \xFCzl\u0259rini qoparmasa poetik d\u0259sti
+      x\u0259tti d\u0259 var dey\u0259 bil\u0259rik."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 425938174720
+    m_Localized: "\u0130ndi bizim internet detektivi, Shadow Marketi y\u0259qin e\u015Fitmis\u0259n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738294651904
+    m_Localized: "M\u0259nim d\u0259 a\u011Fl\u0131ma o g\u0259ldi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847392051584
+    m_Localized: "Onda t\u0259cili olaraq bu qurbanlar\u0131n kimliyini yoxlamal\u0131san."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 592847361728
+    m_Localized: "Shadow Marketl\u0259 \u0259laq\u0259si olub olmad\u0131\u011F\u0131n\u0131
+      da."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374829516032
+    m_Localized: "S\u0259n\u0259 h\u0259l\u0259 ki ilk 3 usb-ni \u015Fifr\u0259li
+      halda yollay\u0131ram."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729384750816
+    m_Localized: "\u018Fg\u0259r 3 qurban\u0131 v\u0259 Shadow Marketl\u0259 \u0259laq\u0259ni
+      tapa bils\u0259n dig\u0259rl\u0259rini d\u0259 yollayacam."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6046394736640
+    m_Localized: "Kapt. El\u015Fad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6122110312448
+    m_Localized: "Sik Ba\u015F\u0131"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

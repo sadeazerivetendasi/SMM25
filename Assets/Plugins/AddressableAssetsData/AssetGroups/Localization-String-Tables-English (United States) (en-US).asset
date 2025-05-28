@@ -22,6 +22,13 @@ MonoBehaviour:
     - Locale-en-US
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 439c736535e69e241b818ad8868bf29e
+    m_Address: Dialog1_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad365c3418c82fc4a82e79c48c636bfe
     m_Address: DesktopButtons_en-US
     m_ReadOnly: 1

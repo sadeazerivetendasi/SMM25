@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dialog1_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 1c85e2490955aa04780f094c79db055f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 30754840576
+    m_Localized: Finally you're online. Great.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 206324211712
+    m_Localized: Too much sleep is harmful anyway, especially when some maniac is
+      murdering half the city.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 874392047104
+    m_Localized: Before we start work, look at this document.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 639281753088
+    m_Localized: So the only clues we have are the USBs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 185749302272
+    m_Localized: Have we looked at them?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 923847651840
+    m_Localized: Looking at them was your responsibility.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 748293056512
+    m_Localized: I can't risk the computer I play solitaire on by plugging in a USB
+      left behind by a psychopath.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 461829374976
+    m_Localized: There's one more thing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 592840731648
+    m_Localized: Go to this link
+    m_Metadata:
+      m_Items: []
+  - m_Id: 318576429120
+    m_Localized: The link doesn't work.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 754920836352
+    m_Localized: Are you sure you wrote the URL correctly?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 283947561984
+    m_Localized: I probably wrote it wrong.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847293051776
+    m_Localized: Just search for 'usb killer forum'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 519384762048
+    m_Localized: The found USBs weren't reported to the public.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174829350912
+    m_Localized: This blog could belong to the real killer!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 693847521536
+    m_Localized: If he wasn't ripping people's faces off, we could say he has a poetic
+      writing style too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 425938174720
+    m_Localized: Now our internet detective, you've probably heard of Shadow Market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 738294651904
+    m_Localized: That came to my mind too
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847392051584
+    m_Localized: Then you urgently need to check the identity of these victims.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 592847361728
+    m_Localized: And whether they had any connection to Shadow Market.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374829516032
+    m_Localized: I'm sending you the first 3 USBs in encrypted form for now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729384750816
+    m_Localized: If you can find the 3 victims and their connection to Shadow Market,
+      I'll send the others too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6046394736640
+    m_Localized: "Capt. El\u015Fad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6122110312448
+    m_Localized: Force of Lead
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
