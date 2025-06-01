@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class ChatManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ChatManager : MonoBehaviour
     public List<GameObject> pageList;
 
     private PersonData currentSelected;
+    private ChatDialogManager currentActiveDialog;
 
     private void Awake()
     {
@@ -32,6 +34,7 @@ public class ChatManager : MonoBehaviour
         userMessagePage.name = chatData.ID;
         pd.messagePanel = userMessagePage;
         SelectUser(pd);
+        //PreloadDialog()
     }
     public void SpawnUser(ChatData chatData)
     {

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4900742166506062291}
   - component: {fileID: 6416155340852719831}
   - component: {fileID: 1759135116195540758}
-  - component: {fileID: 8025336247970016056}
+  - component: {fileID: 2076520111994335739}
+  - component: {fileID: 5649821637261529651}
   m_Layer: 5
   m_Name: Track1
   m_TagString: Untagged
@@ -36,6 +37,7 @@ RectTransform:
   - {fileID: 2088397729538673844}
   - {fileID: 5494889492365784200}
   - {fileID: 292546228246191160}
+  - {fileID: 8353293346356233166}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -64,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06666667, g: 0.007843138, b: 0.34509805, a: 1}
+  m_Color: {r: 0.06666667, g: 0.007843138, b: 0.34509805, a: 0.003921569}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -81,21 +83,39 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 6
---- !u!114 &8025336247970016056
+--- !u!114 &2076520111994335739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065152070311905359}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Script: {fileID: 11500000, guid: c5c3bca24412e074082601f33fb8f0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 0, b: 0.627451, a: 1}
-  m_EffectDistance: {x: -3, y: 0}
-  m_UseGraphicAlpha: 1
+  musicPlayerData: {fileID: 11400000, guid: b7ed6d02bdc1db144ace4ef38643fd02, type: 2}
+  TrackNameText: {fileID: 8269299242406011506}
+  ArtistNameText: {fileID: 8281183403088087464}
+  endingTimeText: {fileID: 8600249326640990757}
+  inActiveColor: {r: 0.06666667, g: 0.007843138, b: 0.34509805, a: 0.003921569}
+  hoverColor: {r: 1, g: 1, b: 1, a: 0.003921569}
+  ActiveColor: {r: 0, g: 0, b: 0, a: 0}
+  Border: {fileID: 8353293346356233166}
+--- !u!114 &5649821637261529651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065152070311905359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &3402510999235232369
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0130sm\u0259t"
+  m_text: "\u0130sm\u0259t - Diva"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f18086f2325d74e44ae0780d6e01dead, type: 2}
   m_sharedMaterial: {fileID: -981012785349183052, guid: f18086f2325d74e44ae0780d6e01dead, type: 2}
@@ -368,6 +388,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4885721186150768547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8353293346356233166}
+  - component: {fileID: 6439053804371325214}
+  - component: {fileID: 6789080768887483398}
+  m_Layer: 5
+  m_Name: Border_Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8353293346356233166
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885721186150768547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4900742166506062291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0}
+  m_SizeDelta: {x: 0, y: 100}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!222 &6439053804371325214
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885721186150768547}
+  m_CullTransparentMesh: 1
+--- !u!114 &6789080768887483398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885721186150768547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0.627451, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2413806693520163455, guid: 3049cd1d170f4e4479e34404d2d35cb7, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1.6
 --- !u!1 &7145156118748752882
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +475,7 @@ GameObject:
   - component: {fileID: 4106592249988092658}
   - component: {fileID: 3977109844015766998}
   m_Layer: 5
-  m_Name: Border
+  m_Name: Border_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -402,9 +497,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.4999847}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 1}
-  m_Pivot: {x: 0.5, y: 5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4106592249988092658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -644,7 +739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0130sm\u0259t Diva - 8 mart"
+  m_text: 8 mart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f18086f2325d74e44ae0780d6e01dead, type: 2}
   m_sharedMaterial: {fileID: -981012785349183052, guid: f18086f2325d74e44ae0780d6e01dead, type: 2}

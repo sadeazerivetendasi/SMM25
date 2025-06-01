@@ -2,13 +2,25 @@ using UnityEngine;
 
 public class ChatDialogManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Transform messageContainer;
+    public GameObject messagePrefabMe,messagePrefabYou;
+    ChatData chatData;
+    int activeIndex;
     void Start()
     {
-        
+        for (int i = 0; i < activeIndex; i++)
+        {
+            if (chatData.dialogData[i].chooseCharacter == DialogData.ChooseCharacter.Me)
+            {
+                Instantiate(messagePrefabMe, messageContainer);
+            }
+            else
+            {
+                Instantiate(messagePrefabYou, messageContainer);
+            }
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         

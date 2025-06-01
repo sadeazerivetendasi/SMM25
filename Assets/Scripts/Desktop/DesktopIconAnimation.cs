@@ -31,7 +31,7 @@ public class DesktopappBarAnimation : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         isHovered = true;
         if (isClicking) return;
-        AnimateScale(originalVector * 1.1f, 0.2f, shadowEndValue);
+        AnimateScale(originalVector * 1.05f, 0.2f, shadowEndValue);
         AnimateIcon(hoverColor,colorAnimationTime);
     }
 
@@ -46,7 +46,7 @@ public class DesktopappBarAnimation : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         isClicking = true;
         Sequence clickSequence = DOTween.Sequence();
-        clickSequence.Append(appBar.transform.DOScale(originalVector * 0.9f, 0.1f));
+        clickSequence.Append(appBar.transform.DOScale(originalVector * 0.95f, 0.1f));
         clickSequence.AppendCallback(() =>
         {
             hadiseIcra.Invoke();

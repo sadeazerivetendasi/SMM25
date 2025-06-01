@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03ed2fc36562c1419f6861400fbc34f, type: 3}
+  m_Name: Ismet - Tebrik Edirem
+  m_EditorClassIdentifier: 
+  TrackName: 8 mart
+  ArtistName: "\u0130sm\u0259t - Diva"
+  audioClip: {fileID: 8300000, guid: bd1a34c19cdc1b547acc43d9c7de3d9f, type: 3}
