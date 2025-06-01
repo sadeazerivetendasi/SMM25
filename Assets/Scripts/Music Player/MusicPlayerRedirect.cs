@@ -19,7 +19,7 @@ public class MusicPlayerRedirect : MonoBehaviour, IPointerEnterHandler, IPointer
         backgroundImage = GetComponent<Image>();
         if (firstPage)
         {
-            MusicPlayerManager.Instance.musicPlayerRedirectActive = this;
+            MusicPlayerManager.Instance.ChangePage(this);
         }
     }
     public void OnPointerClick(PointerEventData eventData)

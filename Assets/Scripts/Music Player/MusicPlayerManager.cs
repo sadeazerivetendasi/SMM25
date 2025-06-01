@@ -10,6 +10,8 @@ public class MusicPlayerManager : MonoBehaviour
     public static MusicPlayerManager Instance;
     [Header("Music Player")]
     public AudioSource musicPlayerSource;
+    public MusicSlider musicSlider;
+    public PlayPauseButton playPauseButton;
     public TMP_Text TrackNameText, ArtistNameText;
     public TMP_Text activeTime, endTime;
     [SerializeField] public float minLimit, maxLimit;
@@ -53,38 +55,41 @@ public class MusicPlayerManager : MonoBehaviour
     }
     public void NextMusic()
     {
-        int b = activeIndex++;
-        if (b > musicPlayerDatas.Count)
+        int nextIndex = activeIndex + 1;
+        if (nextIndex > musicPlayerDatas.Count - 1)
         {
-            activeIndex = 0;
+            nextIndex = 0;
         }
-        MusicChangeIndex(activeIndex);
+        MusicChangeIndex(nextIndex);
     }
     public void PreviousMusic()
     {
-        int b = activeIndex--;
-        if (b < 0)
+        int prevIndex = activeIndex - 1;
+        if (prevIndex < 0)
         {
-            activeIndex = musicPlayerDatas.Count - 1;
+            prevIndex = musicPlayerDatas.Count - 1;
         }
-        MusicChangeIndex(activeIndex);
+        MusicChangeIndex(prevIndex);
     }
     public void MusicChangeIndex(int Index)
     {
         var item = musicPlayerDatas[Index];
+        activeIndex = Index;
         if (!musicPlayerSource.isPlaying)
         {
             if (activeMusicPlayerData != null)
             {
-                activeMusicPlayerData.Deactivate();    
+                activeMusicPlayerData.Deactivate();
             }
             activeMusicPlayerData = item;
             activeMusicPlayerData.Activate();
             TrackNameText.text = item.musicPlayerData.TrackName;
             ArtistNameText.text = item.musicPlayerData.ArtistName;
             musicPlayerSource.clip = item.musicPlayerData.audioClip;
+            musicSlider.SetMinMax(item.musicPlayerData.audioClip);
             musicPlayerSource.volume = 0;
             musicPlayerSource.Play();
+            playPauseButton.icon.sprite = playPauseButton.playIcon;
             GetLength();
             musicPlayerSource.DOFade(1f, 0.5f);
         }
@@ -97,10 +102,12 @@ public class MusicPlayerManager : MonoBehaviour
                 activeMusicPlayerData.Activate();
                 TrackNameText.text = item.musicPlayerData.TrackName;
                 ArtistNameText.text = item.musicPlayerData.ArtistName;
+                musicSlider.SetMinMax(item.musicPlayerData.audioClip);
                 float length = musicPlayerSource.clip.length;
                 musicPlayerSource.Stop();
                 musicPlayerSource.clip = item.musicPlayerData.audioClip;
                 musicPlayerSource.Play();
+                playPauseButton.icon.sprite = playPauseButton.playIcon;
                 GetLength();
                 musicPlayerSource.DOFade(1f, 0.5f);
             });
@@ -110,23 +117,24 @@ public class MusicPlayerManager : MonoBehaviour
     public void AudioSpectrum()
     {
         musicPlayerSource.GetSpectrumData(spectrum, 0, fftWindow);
-        for (int i = 0; i < 32; i++)
+
+        for (int i = 0; i < visualizerBar.Count; i++)
         {
-            float value = Mathf.Clamp01(spectrum[i] * 20); // dəyəri yüksəltmək üçün *20
+            float value = Mathf.Clamp01(spectrum[i] * 20);
             float targetHeight = Mathf.Lerp(minLimit, maxLimit, value);
 
             RectTransform bar = visualizerBar[i];
-            Vector2 newSize = new Vector2(bar.sizeDelta.x, targetHeight);
+            float currentHeight = bar.sizeDelta.y;
+            float smoothHeight = Mathf.Lerp(currentHeight, targetHeight, Time.deltaTime * 10f);
 
-            // Smooth animasiya
-            bar.DOSizeDelta(newSize, updateSpeed).SetEase(Ease.OutQuad);
+            bar.sizeDelta = new Vector2(bar.sizeDelta.x, smoothHeight);
         }
     }
     public void ChangePage(MusicPlayerRedirect musicPlayerRedirect)
     {
         if (musicPlayerRedirect != musicPlayerRedirectActive)
         {
-            musicPlayerRedirectActive.Deactivate();
+            if(musicPlayerRedirectActive != null) musicPlayerRedirectActive.Deactivate();
             musicPlayerRedirectActive = musicPlayerRedirect;
             musicPlayerRedirectActive.Activate();
         }
