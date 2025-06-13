@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    public PageManager pageManager;
     public enum ButtonType
     {
         Visit, Bookmarks
@@ -34,7 +35,11 @@ public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPo
     {
         if (buttonType == ButtonType.Bookmarks)
         {
-            SearchManager.Instance.CreateBookmarksFunction(Title.text);    
+            SearchManager.Instance.CreateBookmarksFunction(Title.text);
+        }
+        else
+        {
+            pageManager.ConnectWeb();
         }
     }
     public void AnimButton(float transformY, Color color, float time, float borderWidth)

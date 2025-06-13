@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ShadowMarketEncylopedia_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: dac020d2331e4334ab0cbe591d5b9daa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 43745927168
+    m_Localized: Shadow Market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90717937664
+    m_Localized: "V\u0130RTUAL ENS\u0130KLOPED\u0130YA - SHADOW MARKET"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139631910912
+    m_Localized: https://virtualencyclopedia.az/shadowmarket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336063750144
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351972745216
+    m_Localized: Shadow Market is a dark web marketplace that originated in Azerbaijan
+      in early 2002 and has since expanded to become one of the fastest-growing anonymous
+      trading platforms globally. Initially serving primarily Eastern European users,
+      the platform has gained international recognition for its sophisticated encryption
+      protocols and user-friendly interface.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10480344489984
+    m_Localized: Shadow Market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10482424864768
+    m_Localized: Shadow Market is a dark web marketplace that originated in Azerbaijan
+      in early 2002 and has since expanded to become one of the fastest-growing anonymous
+      trading platforms globally. Initially serving primarily Eastern European users,
+      the platform has gained international recognition for its sophisticated encryption
+      protocols and user-friendly interface.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10483402137600
+    m_Localized: History
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10484253581312
+    m_Localized: 'Shadow Market was established by an unknown collective of programmers
+      believed to be based in Baku, Azerbaijan. The platform emerged during a period
+      of rapid technological development in post-Soviet states, taking advantage
+      of developing internet infrastructure and regulatory gaps in digital commerce
+      oversight.
+
+
+      The marketplace initially focused on digital goods and services
+      but expanded to include a broader range of products as its user base grew.
+      By 2003, Shadow Market had attracted vendors from across Europe and Asia, establishing
+      itself as a significant competitor to established dark web marketplaces.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10485092442112
+    m_Localized: Technical Features
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10485931302912
+    m_Localized: "Shadow Market distinguishes itself through several technological
+      innovations:\n\n\u2022Advanced onion routing with multiple encryption layers\n\u2022User-friendly
+      interface comparable to legitimate e-commerce sites\n\u2022Integrated dispute
+      resolution system\n\u2022Vendor reputation tracking and verification\n\u2022Multi-currency
+      payment processing including cryptocurrency"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16112250380288
+    m_Localized: Global Expansion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16272825114624
+    m_Localized: While maintaining its Azerbaijan headquarters, Shadow Market has
+      expanded operations internationally. Industry analysts estimate the platform
+      processes thousands of transactions daily, with users spanning North America,
+      Europe, and Asia. This rapid growth has attracted attention from international
+      law enforcement agencies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16316089360384
+    m_Localized: Controversy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16368807567360
+    m_Localized: The platform has faced criticism from law enforcement and cybersecurity
+      experts who argue that its accessibility contributes to the normalization of
+      illegal online commerce. Authorities in multiple countries have issued warnings
+      about the platform's activities.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

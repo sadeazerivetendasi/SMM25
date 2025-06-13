@@ -36,6 +36,12 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dac020d2331e4334ab0cbe591d5b9daa
+    m_Address: Assets/ScriptableObjects/Search/ShadowMarket/ShadowMarketEncylopedia
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 1e9b71d689cd9eb4388dc247abfb028d, type: 2}
   m_SchemaSet:

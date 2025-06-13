@@ -29,6 +29,12 @@ MonoBehaviour:
     - Locale-en-US
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9603a95272086a445bb04923b2c98ce3
+    m_Address: ShadowMarketEncylopedia_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad365c3418c82fc4a82e79c48c636bfe
     m_Address: DesktopButtons_en-US
     m_ReadOnly: 1

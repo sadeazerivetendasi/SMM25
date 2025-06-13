@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: Text_Searching
     m_Metadata:
       m_Items: []
+  - m_Id: 7163495136485376
+    m_Key: Text_WebConnecting
+    m_Metadata:
+      m_Items: []
   - m_Id: 591354257408
     m_Key: Text_NoResults
     m_Metadata:

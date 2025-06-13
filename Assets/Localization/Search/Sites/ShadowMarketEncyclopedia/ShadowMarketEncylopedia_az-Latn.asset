@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ShadowMarketEncylopedia_az-Latn
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: az-Latn
+  m_SharedData: {fileID: 11400000, guid: dac020d2331e4334ab0cbe591d5b9daa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 43745927168
+    m_Localized: Shadow Market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90717937664
+    m_Localized: VIRTUAL ENCYCLOPEDIA - SHADOW MARKET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139631910912
+    m_Localized: https://virtualencyclopedia.az/shadowmarket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336063750144
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 351972745216
+    m_Localized: "Shadow Market 2002-ci ilin \u0259vv\u0259lind\u0259 Az\u0259rbaycanda
+      yarad\u0131lm\u0131\u015F v\u0259 o vaxtdan b\u0259ri qlobal miqyasda \u0259n
+      s\xFCr\u0259tl\u0259 b\xF6y\xFCy\u0259n anonim ticar\u0259t platformalar\u0131ndan
+      birin\u0259 \xE7evrilmi\u015F qaranl\u0131q veb bazar\u0131d\u0131r. \u018Fvv\u0259lc\u0259
+      \u0259sas\u0259n \u015E\u0259rqi Avropa istifad\u0259\xE7il\u0259rin\u0259
+      xidm\u0259t ed\u0259n platforma, m\xFCr\u0259kk\u0259b \u015Fifr\u0259l\u0259m\u0259
+      protokollar\u0131 v\u0259 istifad\u0259\xE7i dostu interfeysi il\u0259 beyn\u0259lxalq
+      tan\u0131nma qazanm\u0131\u015Fd\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10480344489984
+    m_Localized: Shadow Market
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

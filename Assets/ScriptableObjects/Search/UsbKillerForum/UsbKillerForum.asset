@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fe15ed2fcc1414bbe6ce890652507d, type: 3}
   m_Name: UsbKillerForum
   m_EditorClassIdentifier: 
+  saytNovu: 2
   keywords:
   - m_TableReference:
       m_TableCollectionName: GUID:680b77a512060f64e915b8a52cb4c5b6
@@ -65,25 +66,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  H:
-  - SectionTitle:
-      m_TableReference:
-        m_TableCollectionName: GUID:680b77a512060f64e915b8a52cb4c5b6
-      m_TableEntryReference:
-        m_KeyId: 369337163776
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    SectionInfo:
-      m_TableReference:
-        m_TableCollectionName: GUID:680b77a512060f64e915b8a52cb4c5b6
-      m_TableEntryReference:
-        m_KeyId: 407534690304
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  H: []
   references:
     version: 2
     RefIds: []

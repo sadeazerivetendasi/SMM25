@@ -9,8 +9,12 @@ using UnityEngine.Localization;
 public class SearchManager : MonoBehaviour
 {
     public static SearchManager Instance;
+    public GameObject SearchPanel;
     public GameObject[] Pages;
     public SearchData[] searchDatas;
+    [Header("Web")]
+    public GameObject WebPanel,WebLoadingPanel;
+    public GameObject[] WebPages;
 
     [Header("History")]
     public Transform historyContainer;
@@ -40,18 +44,22 @@ public class SearchManager : MonoBehaviour
     {
         Opening = true;
     }
-    public void OpenTab(string tabName)
+    public void OpenSearchTab(string tabName)
     {
+        WebPanel.SetActive(false);
+        SearchPanel.SetActive(true);
         foreach (GameObject item in Pages)
         {
-            if (item.name == tabName)
-            {
-                item.SetActive(true);
-            }
-            else
-            {
-                item.SetActive(false);
-            }
+            item.SetActive(item.name == tabName);
+        }
+    }
+    public void OpenWebTab(string tabName)
+    {
+        SearchPanel.SetActive(false);
+        WebPanel.SetActive(true);
+        foreach (GameObject item in WebPages)
+        {
+            item.SetActive(item.name == tabName);
         }
     }
     public void CloseSearchTab()
@@ -65,7 +73,7 @@ public class SearchManager : MonoBehaviour
         oldSearchText = searchText;
         searchField.text = searchText;
         CreateHistory(searchText);
-        OpenTab("SearchPage");
+        OpenSearchTab("SearchPage");
         foreach (Transform child in pageContainer.transform)
         {
             Destroy(child.gameObject);
@@ -111,6 +119,7 @@ public class SearchManager : MonoBehaviour
                 };
                 foundResults.RefreshString();
                 PageManager pageManager = Instantiate(pagePrefab, pageContainer.transform).GetComponent<PageManager>();
+                pageManager.searchData = item;
                 item.Title.StringChanged += (localizedText) =>
                 {
                     pageManager.TitleText.text = localizedText;
@@ -130,6 +139,27 @@ public class SearchManager : MonoBehaviour
             }
             StartCoroutine(PageOpenerCoroutine("FoundPage",0.5f));
         }
+    }
+    public void WebSystem(SearchData searchData)
+    {
+        WebLoadingPanel.SetActive(true);
+        if (searchData.saytNovu == SearchData.SaytNovu.Encyclopedia)
+        {
+            OpenWebTab("Encyclopedia");
+            WebPages[0].GetComponent<WikipediaWebsite>().SetWikipediaWeb(searchData);
+        }
+        else if (searchData.saytNovu == SearchData.SaytNovu.News)
+        {
+            OpenWebTab("News");
+        }
+        else
+        {
+            OpenWebTab("Forum");
+        }
+    }
+    public void LoadingFinish()
+    {
+        WebLoadingPanel.SetActive(false);
     }
     void CreateHistory(string text)
     {
@@ -168,14 +198,14 @@ public class SearchManager : MonoBehaviour
     IEnumerator PageOpenerCoroutine(string page,float secondTime)
     {
         yield return new WaitForSeconds(secondTime);
-        OpenTab(page);
+        OpenSearchTab(page);
     }
     void OnEnable()
     {
         if (!Opening)
         {
             Opening = true;
-            OpenTab("FirstPage");
+            OpenSearchTab("FirstPage");
         }
     }
 }
