@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ShadowMarketNews Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ShadowMarketNews
+  m_TableCollectionNameGuidString: 51a0ce4e5382bb34496b709c97e52d49
+  m_Entries:
+  - m_Id: 22568886272
+    m_Key: Keyword_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22635995136
+    m_Key: Search_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22635995137
+    m_Key: Search_Link
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22635995138
+    m_Key: Search_Source
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22644383744
+    m_Key: Search_Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22644383745
+    m_Key: News_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22644383746
+    m_Key: News_Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22648578048
+    m_Key: News_Content
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4641877882522042440
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877882522042440
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1750084377492

@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DeepWebLocalization_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 4a20194cf8f99204dbefc8df428397a9, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4641877906221170765
+  m_TableData:
+  - m_Id: 93150633984
+    m_Localized: DARK WEB BROWSER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 237325639680
+    m_Localized: Enter a .onion address to connect to a dark web site.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 343391199232
+    m_Localized: "WARNING: Unauthorized access to restricted \nnetworks is a federal
+      crime."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 422877454336
+    m_Localized: Invalid dark web address. Try finding a valid .onion address through
+      your investigation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1015633272832
+    m_Localized: ESTABLISHING SECURE CONNECTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1112781742080
+    m_Localized: '> Initializing secure connection'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1176950398976
+    m_Localized: '> Routing through proxy network'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1550180540416
+    m_Localized: '> Establishing encrypted channel'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2620231376896
+    m_Localized: SECURE CONNECTION ESTABLISHED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2867418488832
+    m_Localized: Search Shadow Market...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2617496690688
+    m_Localized: '{0} listings found'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5109148147712
+    m_Localized: Filters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65684293148672
+    m_Localized: 'TOR NODE: {0}.{1}.xx.xx'
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170765
+  - m_Id: 66787927777280
+    m_Localized: 'Connected: {0}:{1}:{2}'
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170765
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877906221170765
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 65684293148672
+        - id: 66787927777280

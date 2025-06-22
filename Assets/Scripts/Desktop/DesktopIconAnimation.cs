@@ -46,12 +46,12 @@ public class DesktopappBarAnimation : MonoBehaviour, IPointerEnterHandler, IPoin
     {
         isClicking = true;
         Sequence clickSequence = DOTween.Sequence();
-        clickSequence.Append(appBar.transform.DOScale(originalVector * 0.95f, 0.1f));
+        clickSequence.Append(appBar.transform.DOScale(originalVector * 0.95f, 0.2f));
         clickSequence.AppendCallback(() =>
         {
             hadiseIcra.Invoke();
         });
-        clickSequence.Append(appBar.transform.DOScale(isHovered ? originalVector * 1.1f : originalVector, 0.1f)).OnComplete(() =>
+        clickSequence.Append(appBar.transform.DOScale(isHovered ? originalVector * 1.1f : originalVector, 0.2f)).OnComplete(() =>
         {
             isClicking = false;
             if (!isHovered)

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NotepadLocalization_az-Latn
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: az-Latn
+  m_SharedData: {fileID: 11400000, guid: 34ad620eee6184547820f81a94e63633, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4641877906221170769
+  m_TableData:
+  - m_Id: 863136768000
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170769
+  - m_Id: 921152380928
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170769
+  - m_Id: 924415549440
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170769
+  - m_Id: 622748622848
+    m_Localized: "Ads\u0131z Not"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877906221170769
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 863136768000
+        - id: 921152380928
+        - id: 924415549440

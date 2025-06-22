@@ -1,5 +1,6 @@
 using Coffee.UIEffects;
 using DG.Tweening;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,30 +13,38 @@ public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPo
     {
         Visit, Bookmarks
     }
-    public TMP_Text Title;
+    [ShowIf(nameof(IsBookmarks))]
+    public Sprite normalBookmark, selectBookmark;
     public ButtonType buttonType;
     RectTransform thisRect;
     public Image iconImage;
     public TMP_Text iconText;
     public RectTransform iconBorder;
     public Color normalColor, hoverColor;
+    private Tweener moveTween, colorImageTween, colorTextTween, borderTween;
+
+    private bool IsBookmarks() => buttonType == ButtonType.Bookmarks;
     void Awake()
     {
         thisRect = GetComponent<RectTransform>();
     }
+    void Start() {
+        if(buttonType == ButtonType.Visit) pageManager.Visit.StringChanged += (localizedtext) => iconText.text = localizedtext;
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        AnimButton(1, hoverColor, 0.2f, 80);
+        AnimButton(0.5f, hoverColor, 0.2f, 1);
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        AnimButton(0, normalColor, 0.2f,0);
+        AnimButton(0, normalColor, 0.2f, 0);
     }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (buttonType == ButtonType.Bookmarks)
         {
-            SearchManager.Instance.CreateBookmarksFunction(Title.text);
+            if (pageManager.CreateBookmark()) BookmarksSpriteChange(true);
+            else BookmarksSpriteChange(false);
         }
         else
         {
@@ -44,9 +53,36 @@ public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPo
     }
     public void AnimButton(float transformY, Color color, float time, float borderWidth)
     {
-        thisRect.DOAnchorPosY(transformY, time);
-        iconImage.DOColor(color, time);
-        iconText.DOColor(color, time);
-        iconBorder.DOSizeDelta(new Vector2(borderWidth, iconBorder.sizeDelta.y),time);
+        moveTween = thisRect.DOAnchorPosY(transformY, time);
+        colorImageTween = iconImage.DOColor(color, time);
+        colorTextTween = iconText.DOColor(color, time);
+        borderTween = iconBorder.DOScaleX(borderWidth, time);
     }
+    public void BookmarksSpriteChange(bool Bookmarks)
+    {
+        if (Bookmarks)
+        {
+            iconImage.sprite = selectBookmark;
+            pageManager.Bookmarked.StringChanged += (localizedtext) => iconText.text = localizedtext;
+        }
+        else
+        {
+            iconImage.sprite = normalBookmark;
+            pageManager.Bookmark.StringChanged += (localizedtext) => iconText.text = localizedtext;
+        }
+    }
+    void OnDisable()
+    {
+        moveTween?.Kill();
+        colorImageTween?.Kill();
+        colorTextTween?.Kill();
+        borderTween?.Kill();
+
+        // Əl ilə sıfırlama
+        thisRect.anchoredPosition = new Vector2(thisRect.anchoredPosition.x, 0);
+        iconImage.color = normalColor;
+        iconText.color = normalColor;
+        iconBorder.localScale = new Vector2(0, 1);
+    }
+
 }

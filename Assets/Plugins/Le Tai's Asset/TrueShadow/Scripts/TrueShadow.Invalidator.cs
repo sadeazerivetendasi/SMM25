@@ -265,10 +265,17 @@ public partial class TrueShadow
 
         if (!isActiveAndEnabled) return;
 
-        // For when pressing play while in prefab mode
-        if (!SpriteMesh) SpriteMesh = new Mesh();
-        verts.FillMesh(SpriteMesh);
-        ModifyShadowCastingMesh(SpriteMesh);
+#if TMP_PRESENT
+        if (!(Graphic is TMPro.TextMeshProUGUI))
+        {
+#endif
+            // For when pressing play while in prefab mode
+            if (!SpriteMesh) SpriteMesh = new Mesh();
+            verts.FillMesh(SpriteMesh);
+            ModifyShadowCastingMesh(SpriteMesh);
+#if TMP_PRESENT
+        }
+#endif
 
         SetLayoutTextureDirty();
     }

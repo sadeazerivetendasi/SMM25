@@ -20,6 +20,13 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-az-Latn
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69c512f6c130250478a38dc5b7bce15b
+    m_Address: DeepWebLocalization_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 708e269402314a749a3b6809709446ee
     m_Address: SearchMenuLocalization_az-Latn
@@ -35,6 +42,26 @@ MonoBehaviour:
     - Locale-az-Latn
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99cd2ae93b8e8cd409c1e24edca56df8
+    m_Address: PrescriptionAutharizationPackageComments_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d024f7c75615ba48ab8a3ff668f8241
+    m_Address: ForumUsers_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ddb8d3cce0c98948bb367c2420e2801
+    m_Address: ShadowMarketNews_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4f2e7804db052548986ef61b3c9207d
     m_Address: UsbKillerForum_az-Latn
     m_ReadOnly: 1
@@ -42,11 +69,32 @@ MonoBehaviour:
     - Locale-az-Latn
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d095fee1f888f694cb29a3ac2f1c0ac6
+    m_Address: NotepadLocalization_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2116eeef5bd8d140bb13179a5afe019
+    m_Address: PrescriptionAutharizationPackage_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ef4cb89b6ab93534c825c63dc7041103
     m_Address: ShadowMarketEncylopedia_az-Latn
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-az-Latn
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f00cabd901440e944a81e38e9ec91177
+    m_Address: ShadowMarketForum_az-Latn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-az-Latn
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 1e9b71d689cd9eb4388dc247abfb028d, type: 2}

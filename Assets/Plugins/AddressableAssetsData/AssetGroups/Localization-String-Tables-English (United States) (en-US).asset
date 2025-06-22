@@ -22,8 +22,21 @@ MonoBehaviour:
     - Locale-en-US
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39442ec2d5c541849833703ff3ae19df
+    m_Address: PrescriptionAutharizationPackageComments_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 439c736535e69e241b818ad8868bf29e
     m_Address: Dialog1_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d41b65478c534a41b8327a33ad6588d
+    m_Address: ForumUsers_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
@@ -34,15 +47,50 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3604c4408e82b04ebc3a7e761f5a6c6
+    m_Address: PrescriptionAutharizationPackage_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8166f09652848f43a490628b5c5dc4f
+    m_Address: ShadowMarketForum_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad365c3418c82fc4a82e79c48c636bfe
     m_Address: DesktopButtons_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc6222f0cde88d843a42228f9364483e
+    m_Address: DeepWebLocalization_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8df818c817fc4848a7992df6c61b4bb
+    m_Address: NotepadLocalization_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: efcc90b66da27b54ab3cf7753480e889
     m_Address: UsbKillerForum_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa235891a05e46f4e9eaf87517098872
+    m_Address: ShadowMarketNews_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

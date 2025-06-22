@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ShadowMarketForum_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 110140c9349ad3a4a8ca356d9f233286, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 54446205034496
+    m_Localized: Shadow Market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423107
+    m_Localized: 'Thread: "Shadow Market Discussion - Current Status"
+
+      CyberNomad99
+      - Posted 3 days ago
+
+      Anyone know what''s going on with Shadow Market
+      lately? Haven''t been able to access it through my usual links. Site down or
+      just me?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423106
+    m_Localized: ' '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423105
+    m_Localized: https://digitalunderground.az/tech/728dhaj6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423104
+    m_Localized: TECH UNDERGROUND FORUM - DIGITAL_SHADOWS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423108
+    m_Localized: "Forum <color=#FFFFFF>\u2192</color> Tech <color=#FFFFFF>\u2192</color>
+      Shadow Market"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423109
+    m_Localized: TECH UNDERGROUND FORUM - DIGITAL_SHADOWS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423110
+    m_Localized: "Started by CyberNomad99 \u2022 2 hours ago"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423111
+    m_Localized: '{0} replies
+
+      {1} min ago'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348672
+    m_Localized: Anyone know what's going on with Shadow Market lately? Haven't been
+      able to access it through my usual links. Site down or just me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348673
+    m_Localized: '@CyberNomad99 They rotate URLs frequently for security. Check the
+      usual directory sites. Platform is definitely still operational - processed
+      an order last week without issues.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348674
+    m_Localized: 'PSA: Don''t trust government warnings about SM. Just read that
+      ridiculous Ministry bulletin - pure fear mongering. They claim "15 fraud cases"
+      but provide zero evidence. Classic scare tactics.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348675
+    m_Localized: '@ParanoidPete That bulletin is everywhere now. My uncle forwarded
+      it to the whole family. Government acting like accessing a website makes you
+      a terrorist.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348676
+    m_Localized: Shadow Market vendors are top quality compared to other platforms.
+      Their verification system actually works. Had disputes resolved fairly twice.
+      Government wants to shut down competition to their surveillance capitalism.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348677
+    m_Localized: Can someone PM me current access info? All my bookmarks are dead
+      and I'm getting frustrated. Is it true you need special software?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348678
+    m_Localized: '@NewbieQ NEVER ask for direct links in public forums. Basic security.
+      Use proper directories.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348679
+    m_Localized: Heard some scary stories about Shadow Market recently. Friend of
+      a friend got involved with some vendor selling experimental stuff. Guy disappeared
+      completely. Family filed missing person report. Just saying be careful who
+      you deal with.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348680
+    m_Localized: '@DarkTales That''s urban legend nonsense. People disappear for
+      lots of reasons. Don''t spread FUD without evidence.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348681
+    m_Localized: '@NewbieQ For current Shadow Market URL, check "Hidden Directory
+      Network" - HDN. That site maintains updated links for all major platforms.
+      Just search for HDN and you''ll find their current address. They verify all
+      listings.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348682
+    m_Localized: '@TechInsider Thanks for the tip. HDN is reliable - used them before
+      when other directories went down.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348683
+    m_Localized: Police misinformation campaign is getting ridiculous. They want
+      people scared of digital privacy. Shadow Market provides services government
+      doesn't want available. That's the real issue.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

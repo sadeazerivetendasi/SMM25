@@ -32,6 +32,18 @@ MonoBehaviour:
     m_Localized: "Tap\u0131ld\u0131 {0} eded sayt bu haqda \"{1}\""
     m_Metadata:
       m_Items: []
+  - m_Id: 1729478647808
+    m_Localized: "S\u0259hif\u0259ni ziyar\u0259t edin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1916611715072
+    m_Localized: "\u018Flf\u0259cin edin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8376383054405632
+    m_Localized: "\u018Flf\u0259cin edildi"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

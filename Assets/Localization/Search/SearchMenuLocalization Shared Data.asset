@@ -63,6 +63,10 @@ MonoBehaviour:
     m_Key: Text_Bookmark
     m_Metadata:
       m_Items: []
+  - m_Id: 8376383054405632
+    m_Key: Text_Bookmarked
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

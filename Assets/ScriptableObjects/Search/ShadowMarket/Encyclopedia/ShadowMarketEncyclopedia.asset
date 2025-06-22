@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fe15ed2fcc1414bbe6ce890652507d, type: 3}
+  m_Name: ShadowMarketEncyclopedia
+  m_EditorClassIdentifier: 
+  saytNovu: 0
+  keywords:
+  - m_TableReference:
+      m_TableCollectionName: GUID:dac020d2331e4334ab0cbe591d5b9daa
+    m_TableEntryReference:
+      m_KeyId: 43745927168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:dac020d2331e4334ab0cbe591d5b9daa
+    m_TableEntryReference:
+      m_KeyId: 90717937664
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Link:
+    m_TableReference:
+      m_TableCollectionName: GUID:dac020d2331e4334ab0cbe591d5b9daa
+    m_TableEntryReference:
+      m_KeyId: 139631910912
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Source:
+    m_TableReference:
+      m_TableCollectionName: GUID:dac020d2331e4334ab0cbe591d5b9daa
+    m_TableEntryReference:
+      m_KeyId: 336063750144
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Info:
+    m_TableReference:
+      m_TableCollectionName: GUID:dac020d2331e4334ab0cbe591d5b9daa
+    m_TableEntryReference:
+      m_KeyId: 351972745216
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  encyclopediaWebsites:
+  - {fileID: 11400000, guid: 7374835072862cd4c90a8745f31766a9, type: 2}
+  - {fileID: 11400000, guid: 296f6242894286243b67a452199bf645, type: 2}
+  - {fileID: 11400000, guid: 13f40931cfa754e48a4c741781e1d134, type: 2}
+  - {fileID: 11400000, guid: 3f254f61d1ee3b34f98849c770e3c563, type: 2}
+  - {fileID: 11400000, guid: b0339b3062452c74da12f631e17cb52f, type: 2}
+  references:
+    version: 2
+    RefIds: []

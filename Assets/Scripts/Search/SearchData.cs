@@ -1,24 +1,7 @@
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Localization;
-
-[System.Serializable]
-public class EncyclopediaWebsite
-{
-    public enum BasliqNovu
-    {
-        Header, Section
-    }
-    public BasliqNovu basliqNovu;
-    public LocalizedString SectionTitle;
-    public LocalizedString SectionInfo;
-    public bool isFlex;
-    public LocalizedString flexTitle;
-    public LocalizedString flexInfo;
-}
-
 
 [CreateAssetMenu(fileName = "SearchData", menuName = "Search/SearchData")]
 public class SearchData : ScriptableObject
@@ -31,7 +14,16 @@ public class SearchData : ScriptableObject
     public List<LocalizedString> keywords;
     public LocalizedString Title, Link, Source, Info;
     [ShowIf(nameof(IsEncyclopedia))]
-    public List<EncyclopediaWebsite> encyclopediaWebsites;
+    [Expandable]
+    public List<WikipediaData> encyclopediaWebsites;
+    [ShowIf(nameof(IsForum))]
+    public LocalizedString forumTitle, forumCreated, forumInfo, forumCatalogue;
+    [ShowIf(nameof(IsForum))]
+    [Expandable]
+    public List<ForumData> forumDatas;
+    [ShowIf(nameof(IsNews))]
+    [Expandable]
+    public NewsData newsData;
 
     private bool IsEncyclopedia() => saytNovu == SaytNovu.Encyclopedia;
     private bool IsNews() => saytNovu == SaytNovu.News;

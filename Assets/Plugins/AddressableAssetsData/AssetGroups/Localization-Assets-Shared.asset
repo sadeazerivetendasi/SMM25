@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: b04a5923423f1c2429130d04014a84c5
   m_SerializeEntries:
+  - m_GUID: 110140c9349ad3a4a8ca356d9f233286
+    m_Address: Assets/Localization/Search/Sites/ShadowMarketForum/ShadowMarketForumMessage
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 192079658415344479b208b21ad367ec
     m_Address: Assets/Localization/Search/SearchMenuLocalization Shared Data.asset
     m_ReadOnly: 1
@@ -22,6 +28,35 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1c85e2490955aa04780f094c79db055f
     m_Address: Assets/Localization/Chat/Dialog1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34ad620eee6184547820f81a94e63633
+    m_Address: Assets/Localization/Notepad/New Table Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3abe72380c5e2ae488cdbf7b21e7dc6b
+    m_Address: Assets/Localization/DeepWeb/PrescriptionAutharizationPackage/Comments/PrescriptionAutharizationPackageComments
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a20194cf8f99204dbefc8df428397a9
+    m_Address: "Assets/Localization/DeepWeb/Yeni klas\xF6r/DeepWebLocalization Shared
+      Data.asset"
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d105eee197c203489b16d8622cdbb7a
+    m_Address: Assets/Localization/DeepWeb/PrescriptionAutharizationPackage/PrescriptionAutharizationPackage
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51a0ce4e5382bb34496b709c97e52d49
+    m_Address: Assets/Localization/Search/Sites/ShadowMarketNews/ShadowMarketNews
+      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -39,6 +74,11 @@ MonoBehaviour:
   - m_GUID: dac020d2331e4334ab0cbe591d5b9daa
     m_Address: Assets/ScriptableObjects/Search/ShadowMarket/ShadowMarketEncylopedia
       Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4739ed5f80bede44ab757353f70db20
+    m_Address: Assets/Localization/Search/Sites/Forum/ForumUsers Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

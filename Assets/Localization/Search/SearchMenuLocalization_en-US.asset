@@ -69,6 +69,10 @@ MonoBehaviour:
     m_Localized: Loading Content...
     m_Metadata:
       m_Items: []
+  - m_Id: 8376383054405632
+    m_Localized: Bookmarked
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

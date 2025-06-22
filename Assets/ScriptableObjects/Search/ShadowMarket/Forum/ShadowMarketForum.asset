@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fe15ed2fcc1414bbe6ce890652507d, type: 3}
+  m_Name: ShadowMarketForum
+  m_EditorClassIdentifier: 
+  saytNovu: 2
+  keywords:
+  - m_TableReference:
+      m_TableCollectionName: GUID:dac020d2331e4334ab0cbe591d5b9daa
+    m_TableEntryReference:
+      m_KeyId: 43745927168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423104
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Link:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423105
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Source:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423106
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Info:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423107
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  encyclopediaWebsites: []
+  forumTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423109
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  forumCreated:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423110
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  forumInfo:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423111
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  forumCatalogue:
+    m_TableReference:
+      m_TableCollectionName: GUID:110140c9349ad3a4a8ca356d9f233286
+    m_TableEntryReference:
+      m_KeyId: 54446213423108
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  forumDatas:
+  - {fileID: 11400000, guid: 300a715b7fb6ac94e9c2decc17bf5435, type: 2}
+  - {fileID: 11400000, guid: e66ace2c4a25f084cb90dc5f5a64b4db, type: 2}
+  - {fileID: 11400000, guid: 1ac6209a79376d64da5abe5da3fda401, type: 2}
+  - {fileID: 11400000, guid: 8c7890b5c0b7a0a439ee77fdca3aec6e, type: 2}
+  - {fileID: 11400000, guid: 4453515ac8d91094eb475e1fd3b111e8, type: 2}
+  - {fileID: 11400000, guid: 6310c0291419e9549a4edc09611c9c7c, type: 2}
+  - {fileID: 11400000, guid: a82cf57b551aaa04eb0b1e3191631477, type: 2}
+  - {fileID: 11400000, guid: a2a117e70709a49489a57c7d9862de29, type: 2}
+  - {fileID: 11400000, guid: 46cb763b69409ca4d8fb1a765f302ebb, type: 2}
+  - {fileID: 11400000, guid: 82b3cad859945a54b850fd82d1fa37d8, type: 2}
+  - {fileID: 11400000, guid: 41345724c34f2624c8196f9e2597515f, type: 2}
+  - {fileID: 11400000, guid: b2e807238ec76094fb18f13c86f505bd, type: 2}
+  references:
+    version: 2
+    RefIds: []

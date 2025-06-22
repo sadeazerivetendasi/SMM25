@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NotepadLocalization_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 34ad620eee6184547820f81a94e63633, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4641877906221170768
+  m_TableData:
+  - m_Id: 52738514944
+    m_Localized: NOTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54885998592
+    m_Localized: Search The Notes...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 197957902336
+    m_Localized: No Note Selected
+    m_Metadata:
+      m_Items: []
+  - m_Id: 245861048320
+    m_Localized: Create a new note or select an existing one.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448479485952
+    m_Localized: + Create Note
+    m_Metadata:
+      m_Items: []
+  - m_Id: 622748622848
+    m_Localized: Untitled Note
+    m_Metadata:
+      m_Items: []
+  - m_Id: 736816914432
+    m_Localized: Type your notes here...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 863136768000
+    m_Localized: 'Chars: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170768
+  - m_Id: 921152380928
+    m_Localized: 'Words: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170768
+  - m_Id: 924415549440
+    m_Localized: 'Last Modified: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4641877906221170768
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877906221170768
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 863136768000
+        - id: 921152380928
+        - id: 924415549440

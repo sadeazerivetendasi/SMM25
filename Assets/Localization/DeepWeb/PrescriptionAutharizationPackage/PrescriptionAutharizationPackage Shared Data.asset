@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: PrescriptionAutharizationPackage Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: PrescriptionAutharizationPackage
+  m_TableCollectionNameGuidString: 4d105eee197c203489b16d8622cdbb7a
+  m_Entries:
+  - m_Id: 8098537472
+    m_Key: Key_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10388627456
+    m_Key: Key_Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12766797824
+    m_Key: Key_Vendor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110888345600
+    m_Key: Key_Type
+    m_Metadata:
+      m_Items: []
+  - m_Id: 192949903360
+    m_Key: Key_Price
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124471263748096
+    m_Key: Key_ItemPrice
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4641877900511936584
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877900511936584
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1750146837582

@@ -7,51 +7,51 @@ public class ChatManager : MonoBehaviour
     public static ChatManager Instance;
 
     [Header("User Panel Settings")]
-    public Transform userButtonParent;
-    public GameObject userButtonPrefab;
+    [SerializeField] private Transform userButtonParent;
+    [SerializeField] private GameObject userButtonPrefab;
     [Header("User Message Panel Settings")]
-    public Transform userMessagePageParent;
-    public GameObject userMessagePagePrefab;
+    [SerializeField] private Transform userMessagePageParent;
+    [SerializeField] private GameObject userMessagePagePrefab;
 
     [Header("Message Panels")]
+    ChatController activeChatDialogManager;
+
+
     public List<GameObject> pageList;
 
-    private PersonData currentSelected;
-    private ChatDialogManager currentActiveDialog;
+    private PersonChatData currentSelected;
 
     private void Awake()
     {
         Instance = this;
         ChangePage("FirstPage");
     }
-    public void SpawnUserAndAutomaticOpener(ChatData chatData)
+    private void ChangePage(string pageName)
     {
-        GameObject userGO = Instantiate(userButtonPrefab, userButtonParent);
-        PersonData pd = userGO.GetComponent<PersonData>();
-        userGO.name = chatData.ID;
-        pd.Initialize(chatData);
-        GameObject userMessagePage = Instantiate(userMessagePagePrefab, userMessagePageParent);
-        userMessagePage.name = chatData.ID;
-        pd.messagePanel = userMessagePage;
+        foreach (GameObject item in pageList)
+        {
+            item.SetActive(item.name == pageName);
+        }
+    }
+    public void CreateAndConnectUser(ChatData chatData)
+    {
+        PersonChatData pd = SpawnAndConnectUser(chatData);
         SelectUser(pd);
-        //PreloadDialog()
     }
-    public void SpawnUser(ChatData chatData)
+    PersonChatData SpawnAndConnectUser(ChatData chatData)
     {
-        SpawnUserFunction(chatData);
-    }
-    void SpawnUserFunction(ChatData chatData)
-    {
-        GameObject userGO = Instantiate(userButtonPrefab, userButtonParent);
-        PersonData pd = userGO.GetComponent<PersonData>();
-        userGO.name = chatData.ID;
+        PersonChatData pd = Instantiate(userButtonPrefab, userButtonParent).GetComponent<PersonChatData>();
+        pd.name = chatData.ID;
         pd.Initialize(chatData);
-        GameObject userMessagePage = Instantiate(userMessagePagePrefab, userMessagePageParent);
+        ChatController userMessagePage = Instantiate(userMessagePagePrefab, userMessagePageParent).GetComponent<ChatController>();
+        userMessagePage.SetChatData(chatData);
         userMessagePage.name = chatData.ID;
-        pd.messagePanel = userMessagePage;
+        DialogManager.Instance.chatDialogManagers.Add(userMessagePage);
+        pd.messagePanel = userMessagePage.gameObject;
         pd.messagePanel.SetActive(false);
+        return pd;
     }
-    public void SelectUser(PersonData user)
+    public void SelectUser(PersonChatData user)
     {
         if (currentSelected == user)
         {
@@ -67,14 +67,9 @@ public class ChatManager : MonoBehaviour
             currentSelected.Activate();
         }
     }
-
-    public void ChangePage(string pageName)
+    void OnEnable()
     {
-        foreach (GameObject item in pageList)
-        {
-            bool isFound = (item.name == pageName);
-            item.SetActive(isFound);
-        }
+        if(NotificationManager.Instance != null)
+            NotificationManager.Instance.DelNotifications("Chat");
     }
-
 }

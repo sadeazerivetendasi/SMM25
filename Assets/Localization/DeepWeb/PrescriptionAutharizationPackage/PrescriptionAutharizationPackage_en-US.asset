@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PrescriptionAutharizationPackage_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 4d105eee197c203489b16d8622cdbb7a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4641877900511936585
+  m_TableData:
+  - m_Id: 192949903360
+    m_Localized: "{0} \u20A1"
+    m_Metadata:
+      m_Items:
+      - rid: 4641877900511936585
+  - m_Id: 110888345600
+    m_Localized: MED35 - 77
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12766797824
+    m_Localized: GhostDoc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10388627456
+    m_Localized: Complete system for generating authorized prescriptions that pass
+      pharmacy verification systems. Updated monthly with current authorization codes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8098537472
+    m_Localized: Presicription Autharization Package
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124471263748096
+    m_Localized: "Price\n\u20A1{0}"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877900511936585
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 192949903360

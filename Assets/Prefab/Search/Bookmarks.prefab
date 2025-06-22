@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaa9b3abfc9b0d41be210984659531a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 1
   redirectText: {fileID: 472508474294525831}
   normalColor: {r: 1, g: 0, b: 0.627451, a: 0}
   hoverColor: {r: 1, g: 0, b: 0.627451, a: 1}

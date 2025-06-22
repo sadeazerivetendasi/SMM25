@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: ShadowMarketForum Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: ShadowMarketForum
+  m_TableCollectionNameGuidString: 110140c9349ad3a4a8ca356d9f233286
+  m_Entries:
+  - m_Id: 54446205034496
+    m_Key: Keyword_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423104
+    m_Key: Search_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423105
+    m_Key: Search_Link
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423106
+    m_Key: Search_Source
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423107
+    m_Key: Search_Info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423108
+    m_Key: Forum_Catalogue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423109
+    m_Key: Forum_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423110
+    m_Key: Forum_TitleCreator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54446213423111
+    m_Key: Forum_TitleInfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348672
+    m_Key: Chat_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348673
+    m_Key: Chat_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348674
+    m_Key: Chat_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348675
+    m_Key: Chat_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348676
+    m_Key: Chat_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348677
+    m_Key: Chat_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348678
+    m_Key: Chat_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348679
+    m_Key: Chat_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348680
+    m_Key: Chat_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348681
+    m_Key: Chat_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348682
+    m_Key: Chat_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67991160348683
+    m_Key: Chat_12
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4641877834052665424
+  references:
+    version: 2
+    RefIds:
+    - rid: 4641877834052665424
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1749905935065
