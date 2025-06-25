@@ -1,39 +1,30 @@
-using Flexalon;
-using UnityEngine;
-using UnityEngine.EventSystems;
 using DG.Tweening;
-using UnityEngine.UI;
+using Flexalon;
 using TMPro;
-using NaughtyAttributes;
+using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.UI;
 
-public class NotificationType : MonoBehaviour
+public class ChatNotification : MonoBehaviour, INotification
 {
-    public enum State
-    {
-        Chat, Search
-    }
-    [SerializeField]private State state;
-    [ShowIf(nameof(IsChat))]
-    [SerializeField]private TMP_Text chatPersonNameText, chatMessageText;
-    private LocalizedString dialogText;
+    [SerializeField] private TMP_Text chatPersonNameText, chatMessageText;
+    private LocalizedString _messageLocalize;
     private FlexalonObject flexalonObject, parentFlexalonObject;
     private Button button;
-    private bool IsChat() => state == State.Chat;
-    public State GetState()
+    public void Click()
     {
-        return state;
+        
     }
     void Awake()
     {
         flexalonObject = GetComponent<FlexalonObject>();
         parentFlexalonObject = transform.parent.GetComponent<FlexalonObject>();
         button = GetComponent<Button>();
-        NotificationManager.Instance.AddNotificationList(this);
+        //NotificationManager.Instance.AddNotificationList(this);
     }
     public void Deactivate()
     {
-        NotificationManager.Instance.RemoveNotificationList(this);
+        //NotificationManager.Instance.RemoveNotificationList(this);
         button.interactable = false;
         parentFlexalonObject.HeightType = SizeType.Component;
         flexalonObject.SkipLayout = true;
@@ -51,11 +42,20 @@ public class NotificationType : MonoBehaviour
     }
     public void SetDialogueText(LocalizedString localizedString)
     {
-        dialogText = localizedString;
-        dialogText.StringChanged += value => chatMessageText.text = value;
+        _messageLocalize = localizedString;
+        _messageLocalize.StringChanged += SetText;
     }
-    public void SetListener()
+    private void SetText(string localizedText)
     {
-        //button.onClick.AddListener();
+        chatMessageText.text = localizedText;
+    }
+    void OnDisable()
+    {
+        _messageLocalize.StringChanged -= SetText;
+    }
+
+    public void Remove()
+    {
+        throw new System.NotImplementedException();
     }
 }

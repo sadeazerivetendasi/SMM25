@@ -43745,7 +43745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chatDialogManagers: []
-  ChatPanel: {fileID: 1701821243}
+  chatPanel: {fileID: 1701821243}
 --- !u!4 &1133020159
 Transform:
   m_ObjectHideFlags: 0
@@ -80056,6 +80056,7 @@ GameObject:
   - component: {fileID: 2005905554}
   - component: {fileID: 2005905556}
   - component: {fileID: 2005905555}
+  - component: {fileID: 2005905557}
   m_Layer: 5
   m_Name: MessagesPage
   m_TagString: Untagged
@@ -80101,7 +80102,7 @@ MonoBehaviour:
   _heightType: 1
   _height: 100
   _heightOfParent: 1
-  _depthType: 2
+  _depthType: 3
   _depth: 1
   _depthOfParent: 1
   _minWidthType: 0
@@ -80175,6 +80176,32 @@ MonoBehaviour:
   TransformRotation: {x: 0, y: 0, z: 0, w: 1}
   TransformScale: {x: 1, y: 1, z: 1}
   TransformRectSize: {x: 689.95996, y: 600.59}
+--- !u!114 &2005905557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005905553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcb5ae438b41e3449fdddabaf22c434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _version: 4
+  _direction: 0
+  _wrap: 0
+  _wrapDirection: 3
+  _horizontalAlign: 1
+  _verticalAlign: 1
+  _depthAlign: 1
+  _horizontalInnerAlign: 1
+  _verticalInnerAlign: 1
+  _depthInnerAlign: 1
+  _gapType: 0
+  _gap: 0
+  _wrapGapType: 0
+  _wrapGap: 0
 --- !u!1 &2007354157
 GameObject:
   m_ObjectHideFlags: 0

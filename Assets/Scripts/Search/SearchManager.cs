@@ -177,7 +177,6 @@ public class SearchManager : MonoBehaviour
         else searchWebManager.BookmarksSpriteChange(false);
         searchWebManager.searchData = searchData;
         searchData.Link.StringChanged += (localizedtext) => searchWebManager.linkText.text = localizedtext;
-
     }
     public void LoadingFinish()
     {

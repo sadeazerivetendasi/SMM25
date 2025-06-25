@@ -34,29 +34,28 @@ MonoBehaviour:
     m_LocalVariables: []
   typingSpeed: 0.1
   dialogData:
-  - {fileID: 11400000, guid: c99d3993750c2c64988671fa4573d6a6, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1a16c5bd6db8e4342ad5e4adf6f973e2, type: 2}
+  - {fileID: 11400000, guid: 9854a85306b207e4b8f9031107bc8707, type: 2}
+  - {fileID: 11400000, guid: 3f26330aef5a3ba40af5e1fec1ce9520, type: 2}
+  - {fileID: 11400000, guid: 82a625afdd303754395855b86adff99d, type: 2}
+  - {fileID: 11400000, guid: 783c3f14e06e78048a6d7ca5e14d7ea5, type: 2}
+  - {fileID: 11400000, guid: 128a192a95b2977499353b6829eb0056, type: 2}
+  - {fileID: 11400000, guid: febc1d0028bb7bc4a8f48b302acb5b17, type: 2}
+  - {fileID: 11400000, guid: 1f9c5466d5723834c890ec6ba440f3f3, type: 2}
+  - {fileID: 11400000, guid: d185511ace6f6704689956867e6c2a6a, type: 2}
+  - {fileID: 11400000, guid: 70a85bc421245464c8e2e58c3236d3a0, type: 2}
+  - {fileID: 11400000, guid: 83547741033b29e46be1250df0402e23, type: 2}
+  - {fileID: 11400000, guid: 5a3b8062552a98646b0aa628bfbf8bb8, type: 2}
+  - {fileID: 11400000, guid: e9b3cd405688a8f48aefe82a78180dab, type: 2}
+  - {fileID: 11400000, guid: 30dc6482979f5f146ab903df748c6c8e, type: 2}
+  - {fileID: 11400000, guid: 13e07a73cffad734d8a94f4f9b5b57aa, type: 2}
+  - {fileID: 11400000, guid: 154af5309887cba43be24c27bf238e10, type: 2}
+  - {fileID: 11400000, guid: c83431c6e3c8b9f42a15fc33e35f269c, type: 2}
+  - {fileID: 11400000, guid: 7eba7b43162559444a8e350980e58d91, type: 2}
+  - {fileID: 11400000, guid: 258bd74ea3fad144c89a9cacd0d50dc6, type: 2}
+  - {fileID: 11400000, guid: f8d20ba369cbd6f488b6de967dc1b308, type: 2}
+  - {fileID: 11400000, guid: 6e65dbbe4ea295449be2880d8da4e149, type: 2}
+  - {fileID: 11400000, guid: 5a2c439050801e348843a8eec2f069ce, type: 2}
   references:
     version: 2
     RefIds: []

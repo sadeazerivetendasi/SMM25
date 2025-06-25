@@ -33,22 +33,21 @@ public class ChatManager : MonoBehaviour
             item.SetActive(item.name == pageName);
         }
     }
+    private void CreateUser(ChatData chatData)
+    {
+        PersonChatData pd = SetUser(chatData);
+    }
     public void CreateAndConnectUser(ChatData chatData)
     {
-        PersonChatData pd = SpawnAndConnectUser(chatData);
+        PersonChatData pd = SetUser(chatData);
         SelectUser(pd);
     }
-    PersonChatData SpawnAndConnectUser(ChatData chatData)
+    PersonChatData SetUser(ChatData chatData)
     {
         PersonChatData pd = Instantiate(userButtonPrefab, userButtonParent).GetComponent<PersonChatData>();
-        pd.name = chatData.ID;
-        pd.Initialize(chatData);
         ChatController userMessagePage = Instantiate(userMessagePagePrefab, userMessagePageParent).GetComponent<ChatController>();
-        userMessagePage.SetChatData(chatData);
-        userMessagePage.name = chatData.ID;
-        DialogManager.Instance.chatDialogManagers.Add(userMessagePage);
-        pd.messagePanel = userMessagePage.gameObject;
-        pd.messagePanel.SetActive(false);
+        pd.Initialize(chatData, userMessagePage);
+        DialogManager.Instance.AddChatDialogManager(userMessagePage);
         return pd;
     }
     public void SelectUser(PersonChatData user)

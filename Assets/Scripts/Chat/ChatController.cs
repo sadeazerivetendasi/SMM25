@@ -1,13 +1,15 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class ChatController : MonoBehaviour
 {
-    public Transform messageContainer;
-    public GameObject messagePrefabMe, messagePrefabYou;
-    [SerializeField] private ChatData chatData;
-    [SerializeField] private int _activeIndex;
+    [SerializeField] private Transform messageContainer;
+    [SerializeField] private GameObject messagePrefabMe, messagePrefabYou;
+    private ChatData chatData;
+    private int _activeIndex;
     public int ActiveIndex
     {
         get
@@ -25,6 +27,15 @@ public class ChatController : MonoBehaviour
     }
     public void SetChatData(ChatData _chatData)
     {
+        this.name = _chatData.ID;
         chatData = _chatData;
+    }
+    public MessageController SetMeMessage()
+    {
+        return Instantiate(messagePrefabMe, messageContainer).GetComponent<MessageController>();
+    }
+    public MessageController SetYouMessage()
+    {
+        return Instantiate(messagePrefabYou, messageContainer).GetComponent<MessageController>();
     }
 }

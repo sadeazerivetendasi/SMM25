@@ -6,8 +6,8 @@ using UnityEngine;
 public class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance;
-    public List<ChatController> chatDialogManagers;
-    public GameObject ChatPanel;
+    [SerializeField] private GameObject chatPanel;
+    [SerializeField] private List<ChatController> chatDialogManagers;
     void Awake()
     {
         Instance = this;
@@ -23,46 +23,52 @@ public class DialogManager : MonoBehaviour
             }
         }
     }
-
     private IEnumerator StartDialogue(ChatController chatController)
     {
         var chatData = chatController.GetChatData();
-
-        for (int i = chatController.ActiveIndex; i < chatData.dialogData.Count; i++)
+        for (int i = chatController.ActiveIndex; i < chatData.DialogData.Count; i++)
         {
             chatController.ActiveIndex = i;
-            var item = chatData.dialogData[i];
+            var item = chatData.DialogData[i];
 
-            MessageController chatPrefab = item.chooseCharacter == DialogData.ChooseCharacter.Me ?
-              Instantiate(chatController.messagePrefabMe, chatController.messageContainer).GetComponent<MessageController>() :
-                Instantiate(chatController.messagePrefabYou, chatController.messageContainer).GetComponent<MessageController>();
-            chatPrefab.SetMessage(item.dialogText);
-            chatPrefab.TypingActive();
-            string s = "";
-            foreach (var herf in chatPrefab.GetDialogMessage().GetLocalizedString())
+            MessageController messagePrefab = item.GetChooseCharacter() == DialogData.ChooseCharacter.Me ? chatController.SetMeMessage() :
+                chatController.SetYouMessage();
+            #region TypeWriting
+            bool typeText = messagePrefab.SetType(item);
+            messagePrefab.TypingActive();
+            if (typeText)
             {
-                yield return new WaitForSeconds(chatData.typingSpeed);
-                s += herf;
+                string s = "";
+                foreach (var herf in messagePrefab.DialogMessage.GetLocalizedString())
+                {
+                    yield return new WaitForSeconds(chatData.TypingSpeed);
+                    s += herf;
+                }
             }
-            chatPrefab.TextObjectActive();
-            if(!ChatPanel.activeSelf) NotificationManager.Instance.SetChatNotification(item.dialogText);
-            if (item.pauseDialog)
+            else
+            {
+                yield return new WaitForSeconds(item.SendTime);
+            }
+            messagePrefab.TextObjectActive();
+            #endregion
+            if (!chatPanel.activeSelf) NotificationManager.Instance.SetChatNotification(messagePrefab.DialogMessage);
+            if (item.PauseDialog)
             {
                 chatController.ActiveIndex = i + 1; // növbəti yerdən davam edə bilək
                 break;
             }
-            yield return new WaitForSeconds(item.waitTime);
+            yield return new WaitForSeconds(item.WaitTime);
         }
     }
-    private IEnumerator DialogueTypingWaitingEffect(MessageController messageController, float typingSpeed)
+    public List<ChatController> GetChatDialogManagers()
     {
-        string s = "";
-        foreach (var item in messageController.GetDialogMessage().GetLocalizedString())
-        {
-            yield return new WaitForSeconds(typingSpeed);
-            s += item;
-        }
-        messageController.TextObjectActive();
+        return chatDialogManagers;
     }
-
+    public void AddChatDialogManager(ChatController chatController)
+    {
+        if (!chatDialogManagers.Contains(chatController))
+        {
+            chatDialogManagers.Add(chatController);
+        }
+    }
 }
