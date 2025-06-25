@@ -24,7 +24,8 @@ public class SearchData : ScriptableObject
     [ShowIf(nameof(IsNews))]
     [Expandable]
     public NewsData newsData;
-
+    [SerializeField] private bool _isBookmark;
+    public bool IsBookmark { get => _isBookmark; set => _isBookmark = value; }
     private bool IsEncyclopedia() => saytNovu == SaytNovu.Encyclopedia;
     private bool IsNews() => saytNovu == SaytNovu.News;
     private bool IsForum() => saytNovu == SaytNovu.Forum;

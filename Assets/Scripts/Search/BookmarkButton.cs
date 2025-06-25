@@ -1,35 +1,28 @@
+using System;
 using Coffee.UIEffects;
 using DG.Tweening;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
-public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class BookmarkButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public PageManager pageManager;
-    public enum ButtonType
-    {
-        Visit, Bookmarks
-    }
-    [ShowIf(nameof(IsBookmarks))]
-    public Sprite normalBookmark, selectBookmark;
-    public ButtonType buttonType;
+    PageManager pageManager;
     RectTransform thisRect;
-    public Image iconImage;
-    public TMP_Text iconText;
-    public RectTransform iconBorder;
-    public Color normalColor, hoverColor;
+    Action action;
+    [SerializeField] private LocalizedString bookmarkLoc, bookmarkedLoc;
+    [SerializeField] private Sprite normalBookmark, selectBookmark;
+    [SerializeField] private Image iconImage;
+    [SerializeField] private TMP_Text iconText;
+    [SerializeField] private RectTransform iconBorder;
+    [SerializeField] private Color normalColor, hoverColor;
     private Tweener moveTween, colorImageTween, colorTextTween, borderTween;
-
-    private bool IsBookmarks() => buttonType == ButtonType.Bookmarks;
     void Awake()
     {
         thisRect = GetComponent<RectTransform>();
-    }
-    void Start() {
-        if(buttonType == ButtonType.Visit) pageManager.Visit.StringChanged += (localizedtext) => iconText.text = localizedtext;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -41,17 +34,10 @@ public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPo
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (buttonType == ButtonType.Bookmarks)
-        {
-            if (pageManager.CreateBookmark()) BookmarksSpriteChange(true);
-            else BookmarksSpriteChange(false);
-        }
-        else
-        {
-            pageManager.ConnectWeb();
-        }
+        if (pageManager.CreateBookmark()) BookmarksSpriteChange(true);
+        else BookmarksSpriteChange(false);
     }
-    public void AnimButton(float transformY, Color color, float time, float borderWidth)
+    private void AnimButton(float transformY, Color color, float time, float borderWidth)
     {
         moveTween = thisRect.DOAnchorPosY(transformY, time);
         colorImageTween = iconImage.DOColor(color, time);
@@ -60,16 +46,22 @@ public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPo
     }
     public void BookmarksSpriteChange(bool Bookmarks)
     {
+        bookmarkLoc.StringChanged -= SetBookmarkText;
+        bookmarkedLoc.StringChanged -= SetBookmarkText;
         if (Bookmarks)
         {
             iconImage.sprite = selectBookmark;
-            pageManager.Bookmarked.StringChanged += (localizedtext) => iconText.text = localizedtext;
+            bookmarkedLoc.StringChanged += SetBookmarkText;
         }
         else
         {
             iconImage.sprite = normalBookmark;
-            pageManager.Bookmark.StringChanged += (localizedtext) => iconText.text = localizedtext;
+            bookmarkLoc.StringChanged += SetBookmarkText;
         }
+    }
+    private void SetBookmarkText(string localizedtext)
+    {
+        iconText.text = localizedtext;
     }
     void OnDisable()
     {
@@ -84,5 +76,9 @@ public class VisitBookmarksTransition : MonoBehaviour, IPointerEnterHandler, IPo
         iconText.color = normalColor;
         iconBorder.localScale = new Vector2(0, 1);
     }
-
+    void OnDestroy()
+    {
+        bookmarkLoc.StringChanged -= SetBookmarkText;
+        bookmarkedLoc.StringChanged -= SetBookmarkText;
+    }
 }

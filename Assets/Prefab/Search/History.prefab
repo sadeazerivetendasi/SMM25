@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1176736257330564719}
   - component: {fileID: 6370124712422975843}
   - component: {fileID: 7311809226522881842}
-  - component: {fileID: 4366906036579635165}
+  - component: {fileID: 1481764074491552552}
   m_Layer: 5
   m_Name: History
   m_TagString: Untagged
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
---- !u!114 &4366906036579635165
+--- !u!114 &1481764074491552552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,12 +108,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957516681200764324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efaa9b3abfc9b0d41be210984659531a, type: 3}
+  m_Script: {fileID: 11500000, guid: 67a6808bc4dfbf94293706530496da32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   redirectText: {fileID: 472508474294525831}
   normalColor: {r: 1, g: 0, b: 0.627451, a: 0}
-  hoverColor: {r: 1, g: 0, b: 0.627451, a: 1}
+  hoverColor: {r: 1, g: 0, b: 0.627451, a: 0.7764706}
 --- !u!1 &5103567806809558242
 GameObject:
   m_ObjectHideFlags: 0

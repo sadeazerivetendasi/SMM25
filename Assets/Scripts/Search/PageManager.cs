@@ -1,34 +1,54 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Localization;
 using DG.Tweening;
-using NUnit.Framework.Constraints;
 using LeTai.TrueShadow;
 
 public class PageManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public SearchData searchData;
-    public TrueShadow shadowObject;
-    float shadowValue;
+    [SerializeField] private SearchData searchData;
+    [SerializeField] private TrueShadow shadowObject;
+    [SerializeField] private TMP_Text TitleText, LinkText, SourceText, InfoText;
+    public SearchData SearchData { get => searchData; set => searchData = value; }
+    private float shadowValue;
     RectTransform thisRect;
     Tween shadowElement, transformElement;
     Vector2 originalVector;
-    public VisitBookmarksTransition visitBookmarksTransition;
-    public TMP_Text TitleText, LinkText, SourceText, InfoText;
-    public LocalizedString Visit, Bookmark, Bookmarked;
+
     void Start()
     {
         thisRect = GetComponent<RectTransform>();
         originalVector = thisRect.anchoredPosition;
     }
-    public bool CreateBookmark()
+    public void Initialize(SearchData _searchData)
     {
-        return SearchManager.Instance.CreateBookmarksFunction(searchData, this);
+        searchData = _searchData;
+        searchData.Title.StringChanged += SetTitleText;
+        searchData.Link.StringChanged += SetLinkText;
+        searchData.Source.StringChanged += SetSourceText;
+        searchData.Info.StringChanged += SetInfoText;
     }
+    #region LocalizeText
+    private void SetTitleText(string localizedText)
+    {
+        TitleText.text = localizedText;
+    }
+    private void SetLinkText(string localizedText)
+    {
+        LinkText.text = localizedText;
+    }
+    private void SetSourceText(string localizedText)
+    {
+        SourceText.text = localizedText;
+    }
+    private void SetInfoText(string localizedText)
+    {
+        InfoText.text = localizedText;
+    }
+    #endregion
     public void ConnectWeb()
     {
-        SearchManager.Instance.WebSystem(searchData, this);
+        SearchManager.Instance.WebSystem(searchData);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -56,5 +76,15 @@ public class PageManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         transformElement?.Kill();
         shadowObject.Size = 1.59f;
         thisRect.anchoredPosition = originalVector;
+    }
+    void OnDestroy()
+    {
+        if (searchData != null)
+        {
+            searchData.Title.StringChanged -= SetTitleText;
+            searchData.Link.StringChanged -= SetLinkText;
+            searchData.Source.StringChanged -= SetSourceText;
+            searchData.Info.StringChanged -= SetInfoText;   
+        }
     }
 }

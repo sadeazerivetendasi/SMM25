@@ -10,36 +10,33 @@ using UnityEngine.Localization;
 public class SearchManager : MonoBehaviour
 {
     public static SearchManager Instance;
-    public GameObject SearchPanel;
-    public FlexalonFlexibleLayout SearchPanelFlexibleLayout;
-    public GameObject[] Pages;
-    public SearchData[] searchDatas;
-    [Header("Web")]
-    public SearchWebManager searchWebManager;
-    public GameObject WebPanel, WebLoadingPanel;
-    public GameObject[] WebPages;
+    [SerializeField] private BookmarkSystem bookmarkSystem;
+    [SerializeField] private HistorySystem historySystem;
+    [SerializeField] private GameObject SearchPanel;
+    [SerializeField] private FlexalonFlexibleLayout SearchPanelFlexibleLayout;
+    [SerializeField] private GameObject[] Pages;
+    [SerializeField] private SearchData[] searchDatas;
 
-    [Header("History")]
-    public Transform historyContainer;
-    public GameObject historyPrefab;
-    [Header("Bookmarks")]
-    public Transform bookmarksContainer;
-    public GameObject bookmarksPrefab;
-    List<SearchData> bookmarksSearchDataList = new List<SearchData>();
-    List<HistoryBookmarksRedirect> bookmarksComponentList = new List<HistoryBookmarksRedirect>();
-    [Header("History")]
-    public TMP_InputField searchField;
+    [Header("Web")]
+    [SerializeField] private SearchWebManager searchWebManager;
+    [SerializeField] private GameObject WebPanel;
+    [SerializeField] private GameObject[] WebPages;
+    [SerializeField] private TMP_InputField searchField;
+
     [Header("Page")]
-    public GameObject pageContainer;
-    public GameObject pagePrefab;
+    [SerializeField] private GameObject pageContainer;
+    [SerializeField] private GameObject pagePrefab;
+
     [Header("NoResultsPage")]
-    public LocalizedString noResults;
-    public TMP_Text noResultsText;
+    [SerializeField] private LocalizedString noResults;
+    [SerializeField] private TMP_Text noResultsText;
+
     [Header("FoundPage")]
-    public TMP_Text foundResultsText;
-    public LocalizedString foundResults;
+    [SerializeField] private TMP_Text foundResultsText;
+    [SerializeField] private LocalizedString foundResults;
     string oldSearchText;
     bool Opening;
+    List<SearchData> founds;
     void Awake()
     {
         Instance = this;
@@ -57,15 +54,6 @@ public class SearchManager : MonoBehaviour
             item.SetActive(item.name == tabName);
         }
     }
-    public void OpenWebTab(string tabName)
-    {
-        SearchPanel.SetActive(false);
-        WebPanel.SetActive(true);
-        foreach (GameObject item in WebPages)
-        {
-            item.SetActive(item.name == tabName);
-        }
-    }
     public void CloseSearchTab()
     {
         Opening = false;
@@ -77,33 +65,27 @@ public class SearchManager : MonoBehaviour
         SearchPanelFlexibleLayout.enabled = true;
         oldSearchText = searchText;
         searchField.text = searchText;
-        CreateHistory(searchText);
+        historySystem.CreateHistory(searchText);
         OpenSearchTab("SearchPage");
         foreach (Transform child in pageContainer.transform)
         {
             Destroy(child.gameObject);
         }
-        List<SearchData> founds = new List<SearchData>();
+        founds = new List<SearchData>();
         foreach (var item in searchDatas)
         {
-            int foundCount = 0;
             foreach (var keywords in item.keywords)
             {
-                if (foundCount != 0)
+                if (founds.Count != 0)
                 {
                     break;
                 }
                 keywords.StringChanged += (localizedText) =>
                 {
-                    if (string.Equals(localizedText, searchText, StringComparison.OrdinalIgnoreCase))
+                    if (string.Equals(localizedText, searchText, StringComparison.OrdinalIgnoreCase) ||
+                        string.Equals(localizedText.Replace(" ", ""), searchText.Replace(" ", ""), StringComparison.OrdinalIgnoreCase))
                     {
                         founds.Add(item);
-                        foundCount += 1;
-                    }
-                    else if (string.Equals(localizedText.Replace(" ", ""), searchText.Replace(" ", ""), StringComparison.OrdinalIgnoreCase))
-                    {
-                        founds.Add(item);
-                        foundCount += 1;
                     }
                 };
             }
@@ -111,10 +93,7 @@ public class SearchManager : MonoBehaviour
         if (founds.Count == 0)
         {
             noResults.Arguments = new object[] { searchText };
-            noResults.StringChanged += (localizedText) =>
-            {
-                noResultsText.text = localizedText;
-            };
+            noResults.StringChanged += (localizedText) => noResultsText.text = localizedText;
             noResults.RefreshString();
             StartCoroutine(PageOpenerCoroutine("NoResultsPage", 0.5f));
         }
@@ -123,110 +102,26 @@ public class SearchManager : MonoBehaviour
             foreach (var item in founds)
             {
                 foundResults.Arguments = new object[] { founds.Count, searchText };
-                foundResults.StringChanged += (localizedtext) =>
-                {
-                    foundResultsText.text = localizedtext;
-                };
+                foundResults.StringChanged += (localizedtext) => foundResultsText.text = localizedtext;
                 foundResults.RefreshString();
                 PageManager pageManager = Instantiate(pagePrefab, pageContainer.transform).GetComponent<PageManager>();
-                pageManager.searchData = item;
-                item.Title.StringChanged += (localizedText) =>
-                {
-                    pageManager.TitleText.text = localizedText;
-                };
-                item.Link.StringChanged += (localizedText) =>
-                {
-                    pageManager.LinkText.text = localizedText;
-                };
-                item.Source.StringChanged += (localizedText) =>
-                {
-                    pageManager.SourceText.text = localizedText;
-                };
-                item.Info.StringChanged += (localizedText) =>
-                {
-                    pageManager.InfoText.text = localizedText;
-                };
-                if (bookmarksSearchDataList.IndexOf(item) != -1)
-                {
-                    pageManager.visitBookmarksTransition.BookmarksSpriteChange(true);
-                }
+                pageManager.Initialize(item);
+                // if (bookmarksSearchDataList.IndexOf(item) != -1)
+                // {
+                //     pageManager.visitBookmarksTransition.BookmarksSpriteChange(true);
+                // }
             }
             StartCoroutine(PageOpenerCoroutine("FoundPage", 0.5f));
         }
     }
-    public void WebSystem(SearchData searchData, PageManager pageManager)
+    public void WebSystem(SearchData searchData)
     {
-        WebLoadingPanel.SetActive(true);
-        if (searchData.saytNovu == SearchData.SaytNovu.Encyclopedia)
-        {
-            OpenWebTab("Encyclopedia");
-            WebPages[0].GetComponent<WikipediaWebsiteManager>().SetWikipediaWeb(searchData);
-        }
-        else if (searchData.saytNovu == SearchData.SaytNovu.News)
-        {
-            OpenWebTab("News");
-            WebPages[2].GetComponent<NewsWebsiteManager>().SetNewsWeb(searchData);
-        }
-        else
-        {
-            OpenWebTab("Forum");
-            WebPages[1].GetComponent<ForumWebsiteManager>().SetForumWeb(searchData);
-        }
-        searchWebManager.pageManager = pageManager;
-        if (bookmarksSearchDataList.IndexOf(searchData) != -1) searchWebManager.BookmarksSpriteChange(true);
-        else searchWebManager.BookmarksSpriteChange(false);
-        searchWebManager.searchData = searchData;
-        searchData.Link.StringChanged += (localizedtext) => searchWebManager.linkText.text = localizedtext;
+        WebPanel.SetActive(true);
+        searchWebManager.Initialize(searchData);
     }
-    public void LoadingFinish()
+    public bool CreateBookmark(SearchData searchData)
     {
-        WebLoadingPanel.SetActive(false);
-    }
-    void CreateHistory(string text)
-    {
-        HistoryBookmarksRedirect newHistory = Instantiate(historyPrefab, historyContainer).GetComponent<HistoryBookmarksRedirect>();
-        newHistory.redirectText.text = text;
-    }
-    void CreateBookmarks(SearchData searchData, PageManager pageManager)
-    {
-        HistoryBookmarksRedirect newBookmarks = Instantiate(bookmarksPrefab, bookmarksContainer).GetComponent<HistoryBookmarksRedirect>();
-        searchData.Title.StringChanged += (localizedtext) => newBookmarks.redirectText.text = localizedtext;
-        newBookmarks.searchData = searchData;
-        newBookmarks.pageManager = pageManager;
-        bookmarksSearchDataList.Add(searchData);
-        bookmarksComponentList.Add(newBookmarks);
-    }
-    void DelBookmarks(SearchData searchData)
-    {
-        int b = bookmarksSearchDataList.IndexOf(searchData);
-        if (b != -1 && b < bookmarksComponentList.Count)
-        {
-            bookmarksSearchDataList.RemoveAt(b);
-
-            Destroy(bookmarksComponentList[b].gameObject);
-            bookmarksComponentList.RemoveAt(b);
-        }
-    }
-    public bool CreateBookmarksFunction(SearchData searchData, PageManager pageManager)
-    {
-        if (bookmarksSearchDataList.Count != 0)
-        {
-            if (!bookmarksSearchDataList.Contains(searchData))
-            {
-                CreateBookmarks(searchData , pageManager);
-                return true;
-            }
-            else
-            {
-                DelBookmarks(searchData);
-                return false;
-            }
-        }
-        else
-        {
-            CreateBookmarks(searchData , pageManager);
-            return true;
-        }
+        return bookmarkSystem.CreateBookmarkFunc(searchData);
     }
     IEnumerator PageOpenerCoroutine(string page, float secondTime)
     {

@@ -9,6 +9,7 @@ public class WikipediaWebsiteManager : MonoBehaviour
     public Transform bodyContentContainer;
     public GameObject headerPrefab, sectionPrefab;
     List<WikipediaData> encyclopediaWebsites;
+
     public void SetWikipediaWeb(SearchData searchData)
     {
         foreach (Transform child in bodyContentContainer.transform)
@@ -18,36 +19,17 @@ public class WikipediaWebsiteManager : MonoBehaviour
         encyclopediaWebsites = searchData.encyclopediaWebsites;
         foreach (var item in encyclopediaWebsites)
         {
-            AboutController aboutController;
-            if (item.basliqNovu == WikipediaData.BasliqNovu.Header)
-            {
-                aboutController = Instantiate(headerPrefab, bodyContentContainer).GetComponent<AboutController>();
-            }
-            else
-            {
-                aboutController = Instantiate(sectionPrefab, bodyContentContainer).GetComponent<AboutController>();
-            }
-            item.SectionInfo.StringChanged += (localizedtext) =>
-            {
-                aboutController.infoText.text = localizedtext;
-            };
-            item.SectionTitle.StringChanged += (localizedtext) =>
-            {
-                aboutController.titleText.text = localizedtext;
-            };
+            AboutController aboutController = item.basliqNovu == WikipediaData.BasliqNovu.Header ?
+                Instantiate(headerPrefab, bodyContentContainer).GetComponent<AboutController>() :
+                    Instantiate(sectionPrefab, bodyContentContainer).GetComponent<AboutController>();
+            item.SectionInfo.StringChanged += aboutController.SetInfoText;
+            item.SectionTitle.StringChanged += aboutController.SetTitleText;
             if (item.isFlex)
             {
-                item.flexTitle.StringChanged += (localizedtext) =>
-                {
-                    aboutController.flexTitleText.text = localizedtext;
-                };
-                item.flexInfo.StringChanged += (localizedtext) =>
-                {
-                    aboutController.flexInfoText.text = localizedtext;
-                };
+                item.flexTitle.StringChanged += aboutController.SetFlexTitleText;
+                item.flexInfo.StringChanged += aboutController.SetFlexInfoText;
             }
-            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)aboutController.transform);
         }
-        SearchManager.Instance.Invoke("LoadingFinish",0.5f);
+        SearchManager.Instance.Invoke("LoadingFinish", 0.5f);
     }
 }
